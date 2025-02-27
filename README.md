@@ -8,7 +8,7 @@ pip install -r ./requirements_vllm.txt
 
 ```bash
 cd ./src/reasoning
-CUDA_VISIBLE_DEVICES=0 python self_discover_vllm.py
+CUDA_VISIBLE_DEVICES=0 python reasoning_paths_gen.py
 ```
 
 ### 2. Process the reasoning (Filtering) to do Exact Match (Section `3.2.1`)
