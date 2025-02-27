@@ -1,3 +1,10 @@
+"""
+Modify codes from https://github.com/catid/self-discover.git
+
+BSD 3-Clause License
+Copyright (c) 2024, Chris Taylor
+"""
+
 from fastchat.conversation import get_conv_template
 from src.reasoning.read_datasets import load_gsm8k
 from vllm import LLM, SamplingParams
