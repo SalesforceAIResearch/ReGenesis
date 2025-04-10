@@ -1,3 +1,12 @@
+# ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement
+
+This paper is accepted by ICLR-2025 as Oral Presentation.
+
+Paper: [Arxiv Link](https://arxiv.org/abs/2410.02108)
+
+## Abstract
+Post-training Large Language Models (LLMs) with explicit reasoning trajectories can enhance their reasoning abilities. However, acquiring such high-quality trajectory data typically demands meticulous supervision from humans or superior models, which can be either expensive or license-constrained. In this paper, we explore how far an LLM can improve its reasoning by self-synthesizing reasoning paths as training data without any additional supervision. Existing self-synthesizing methods, such as STaR, suffer from poor generalization to out-of-domain (OOD) reasoning tasks. We hypothesize it is due to that their self-synthesized reasoning paths are too task-specific, lacking general task-agnostic reasoning guidance. To address this, we propose Reasoning Generalist via Self-Improvement (ReGenesis), a method to self-synthesize reasoning paths as post-training data by progressing from abstract to concrete. More specifically, ReGenesis self-synthesizes reasoning paths by converting general reasoning guidelines into task-specific ones, generating reasoning structures, and subsequently transforming these structures into reasoning paths, without the need for human-designed task-specific examples used in existing methods. We show that ReGenesis achieves superior performance on all in-domain and OOD settings tested compared to existing methods. For six OOD tasks specifically, while previous methods exhibited an average performance decrease of approximately 4.6% after post training, ReGenesis delivers around 6.1% performance improvement. We also conduct in-depth analysis of our framework and show ReGenesis is effective across various LLMs and design choices.
+
 ## Environment
 ```ruby
 pip install -r ./requirements_vllm.txt
@@ -52,3 +61,14 @@ sh ft_mistral.sh
 ### 7. Eval Dataset
 
 We use the codes from `https://github.com/OpenBMB/Eurus`
+
+## Citation
+
+```ruby
+@article{peng2024regenesis,
+  title={ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement},
+  author={Peng, Xiangyu and Xia, Congying and Yang, Xinyi and Xiong, Caiming and Wu, Chien-Sheng and Xing, Chen},
+  journal={arXiv preprint arXiv:2410.02108},
+  year={2024}
+}
+```
